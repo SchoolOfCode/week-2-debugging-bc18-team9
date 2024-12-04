@@ -1,10 +1,13 @@
 function countNumberOfNinesInNumber(number) {
   let count = 0;
 
-  for (let i = 0; i < number.length; i++) {
-    const digit = number[i];
+  for (let i = 0; i < number.toString().length; i++) {
+    const digit = number.toString()[i];
+    console.log(i)
+    console.log(digit)
+    console.log("running")
     
-    if (9 === digit) {
+    if ('9' === digit) {
       count++;
     }
   }
@@ -29,3 +32,11 @@ function countNumberOfNinesInNumber(number) {
 //     count++;
 //   }
 // }
+
+// the loop is never running 
+// for (let i = 0; i < number.length; i++)  replace with number 
+//  console.log(digit)   retunred as undefined 
+// console.log(i) returned the correct index
+// should const line 5 be changed to let? doesn't change retruned undefined
+// for (let i = 0; i < number.toString().length; i++)
+//
